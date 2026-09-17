@@ -33,7 +33,7 @@
                 116.54222222222222
             ]
         ],
-        "Overlapping_Area": 100.0,
+        "Overlapping_Area": 7.3,
         "Center_Distance": -1.0,
         "RelatedItems": []
     },
@@ -75,7 +75,7 @@
                 116.42500000000001
             ]
         ],
-        "Overlapping_Area": 86.8,
+        "Overlapping_Area": 6.7,
         "Center_Distance": -1.0,
         "RelatedItems": []
     },
@@ -117,7 +117,7 @@
                 116.42500000000001
             ]
         ],
-        "Overlapping_Area": 86.8,
+        "Overlapping_Area": 6.7,
         "Center_Distance": -1.0,
         "RelatedItems": []
     },
@@ -160,7 +160,7 @@
             ]
         ],
         "Overlapping_Area": 0.0,
-        "Center_Distance": 171.7,
+        "Center_Distance": 191.0,
         "RelatedItems": [
             {
                 "CODE": "A1252/22",
@@ -179,7 +179,7 @@
                 "source_index": 1,
                 "GroupKey": "c753804644",
                 "IsSameGroup": true,
-                "parent_index": 6
+                "parent_index": 7
             }
         ]
     },
@@ -222,7 +222,7 @@
             ]
         ],
         "Overlapping_Area": 0.0,
-        "Center_Distance": 171.7,
+        "Center_Distance": 191.0,
         "RelatedItems": []
     },
     {
@@ -264,7 +264,7 @@
             ]
         ],
         "Overlapping_Area": 0.0,
-        "Center_Distance": 171.7,
+        "Center_Distance": 191.0,
         "RelatedItems": []
     }
 ]
