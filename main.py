@@ -1245,7 +1245,7 @@ def fetch(source_fetcher=None):
         print(f'读取数据源配置失败: {exc}')
         enabled_sources = []
     # 与位置无关的海事源仅抓一次，放在第二批，避免聚焦/全量阶段重复请求。
-    notam_sources = [name for name in enabled_sources if name not in {'msi', 'uscg'}]
+    notam_sources = [name for name in enabled_sources if name not in {'msi', 'uscg', 'caac'}]
 
     batches = []
     focused_keys = set()

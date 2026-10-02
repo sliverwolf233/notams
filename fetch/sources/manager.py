@@ -59,6 +59,9 @@ def fetch_enabled_sources(config, locations=None, source_names=None):
             available = ', '.join(sorted(registry))
             raise ValueError(f'未知数据源 {name!r}，可选值: {available}')
         result = source_class(config, locations).fetch()
+        if not result.success and getattr(source_class, 'optional', False):
+            print(f'[data-source:{name}] 获取失败（可选数据源，已跳过，不影响主流程）: {result.error}')
+            continue
         results.append(result)
         if not result.success:
             print(f'[data-source:{name}] 获取失败: {result.error}')
@@ -85,6 +88,7 @@ def fetch_enabled_sources(config, locations=None, source_names=None):
 
 
 def _source_registry():
+    from .caac import CAACDataSource
     from .daip import DAIPDataSource
     from .dins import DINSDataSource
     from .faa import FAADataSource
@@ -97,4 +101,5 @@ def _source_registry():
         'dins': DINSDataSource,
         'msi': MSIDataSource,
         'uscg': USCGDataSource,
+        'caac': CAACDataSource,
     }

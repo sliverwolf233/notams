@@ -49,12 +49,12 @@ Providers are selected in `config.ini`:
 
 ```ini
 [DATA_SOURCES]
-enabled = faa, daip, msi, uscg
+enabled = faa, daip, msi, uscg, caac
 ```
 
-This deployment enables all four active providers in priority order. Duplicate records with the same `SOURCE + CODE` keep the version from the first configured provider. `[ICAO] codes` supplies the shared location list.
+This deployment enables all five active providers in priority order. Duplicate records with the same `SOURCE + CODE` keep the version from the first configured provider. `[ICAO] codes` supplies the shared location list.
 
-Available providers are `faa`, `daip`, `dins` (legacy adapter), `msi` (legacy adapter), and `uscg` (USCG NOTMAR). Provider-specific request and parsing code lives under `fetch/sources/<provider>/`. Every provider emits the same normalized fields, while `main.py` only performs aggregation, filtering, classification, and persistence.
+Available providers are `faa`, `daip`, `dins` (legacy adapter), `msi` (legacy adapter), `uscg` (USCG NOTMAR), and `caac` (CAAC eAIP monthly NOTAM summary from eaipchina.cn; updates irregularly, the client scans back month by month for the latest issue). Provider-specific request and parsing code lives under `fetch/sources/<provider>/`. Every provider emits the same normalized fields, while `main.py` only performs aggregation, filtering, classification, and persistence.
 
 The DAIP certificate chain is commonly absent from the Python/Certifi default trust store, so the sample configuration uses `verify_ssl = false`. Set it to `true` when the corresponding CA certificates are installed in the runtime environment.
 
@@ -67,7 +67,8 @@ fetch/sources/
 ├── daip/
 ├── dins/
 ├── msi/
-└── uscg/
+├── uscg/
+└── caac/
 ```
 
 If you find a bug or want to improve the project, feel free to open an Issue or Pull Request.
@@ -115,11 +116,11 @@ NOTAM 通常如下：  <br>
 
 #### 数据源配置
 
-数据源由 `config.ini` 的 `[DATA_SOURCES]` 选择。本站当前启用全部四个可用数据源，按优先级聚合：
+数据源由 `config.ini` 的 `[DATA_SOURCES]` 选择。本站当前启用全部五个可用数据源，按优先级聚合（CAAC eAIP 月度汇总更新不定期，客户端会逐月回溯找最新一期）：
 
 ```ini
 [DATA_SOURCES]
-enabled = faa, daip, msi, uscg
+enabled = faa, daip, msi, uscg, caac
 ```
 
 相同 `SOURCE + CODE` 的记录会保留先出现的数据源版本。`[ICAO] codes` 是所有航空 NOTAM 数据源共用的查询位置列表。当前可选模块为：
@@ -129,6 +130,7 @@ enabled = faa, daip, msi, uscg
 - `dins`：旧 FAA DINS HTML 数据源的兼容适配器。
 - `msi`：现有海事安全信息数据源的兼容适配器。
 - `uscg`：USCG NAVCEN Local Notice to Mariners（NOTMAR）GeoJSON 数据源。
+- `caac`：中国民航 eAIP NOTAM Summary 月度汇总（eaipchina.cn），覆盖国内长期有效区域航警。
 
 每个模块负责自己的网络请求和原始响应解析，统一输出 `CODE`、`COORDINATES`、`TIME`、`PLATID`、`RAWMESSAGE`、`ALTITUDE`、`SOURCE`、`FIR`。主流程只负责聚合、区域过滤、有效期过滤、分类和落盘。
 
@@ -145,7 +147,8 @@ fetch/sources/
 ├── daip/            # DAIP 请求、解析和数据源入口
 ├── dins/            # 旧 DINS 兼容适配器
 ├── msi/             # MSI 兼容适配器
-└── uscg/            # USCG NOTMAR 数据源
+├── uscg/            # USCG NOTMAR 数据源
+└── caac/            # CAAC eAIP NOTAM Summary 月度汇总
 ```
 
 新增数据源时，实现 `DataSource.fetch()` 并在 `fetch/sources/manager.py` 注册即可；其余业务层不需要修改。

@@ -3,4 +3,5 @@ numpy
 pandas
 beautifulsoup4 
 Pillow
+pdfplumber
 qq-botpy
