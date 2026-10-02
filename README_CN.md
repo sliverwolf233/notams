@@ -2,26 +2,25 @@
 
 # 🌐 NOTAM 网站查看器
 
-![GitHub stars](https://img.shields.io/github/stars/Joey0609/notams?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Joey0609/notams?style=social)
-![GitHub issues](https://img.shields.io/github/issues/Joey0609/notams)
-[![Website](https://img.shields.io/badge/website-online-brightgreen)](https://joey0609.github.io/notams/)
-[![Website Visits](https://img.shields.io/badge/dynamic/json?color=blue&label=Visits&query=value&url=https://joey0609.github.io/notams/visits.json)](https://counter.dev/dashboard.html?user=Starsky69&token=Beb6_vARt7c%3D)
+![GitHub stars](https://img.shields.io/github/stars/sliverwolf233/notams?style=social)
+![GitHub forks](https://img.shields.io/github/forks/sliverwolf233/notams?style=social)
+![GitHub issues](https://img.shields.io/github/issues/sliverwolf233/notams)
+[![Website](https://img.shields.io/badge/website-online-brightgreen)](https://sliverwolf233.github.io/notams/)
 </div>
 
 [English](README.md) | 中文
 
 
-## 网站：https://joey0609.github.io/notams/ <br>
+## 网站：https://sliverwolf233.github.io/notams/ <br>
 
 
 本项目用于从 NOTAM 及相关海事安全信息中提取火箭发射、碎片落区及危险区坐标，并将其可视化展示在地图上。除了基础的区域绘制能力，网站还有历史归档、来源匹配、图片导出、经纬度查询、测距等功能。<br>
 
 **如果你觉得这个项目有帮助，欢迎在 GitHub 上点个 ⭐。你的支持会鼓励我们持续改进并添加更多功能。谢谢！**
 
-**本项目 FallingFengre/notams:main 的基础上进行修改。**<br>
+**本项目基于 [Joey0609/notams](https://github.com/Joey0609/notams)（原版 FallingFengre/notams）修改，由 [sliverwolf233](https://github.com/sliverwolf233) 部署维护。**<br>
 
-## <span style="font-weight:bold;color:red;">本项目严禁用于非法用途，请用户自觉维护国家安全，对于非火箭航警做到不分析，不传播！</span>
+## <span style="font-weight:bold;">免责声明：本站仅用于 NOTAM 航行通告的信息展示与学习交流，不构成任何飞行或运行依据。实际飞行运行请以官方 AIP / NOTAM 资料为准，请勿将本项目用于非法用途。</span>
 
 ## 项目概述
 
@@ -91,10 +90,6 @@ fetch/sources/
 新增数据源时，实现 `DataSource.fetch()` 并在 `fetch/sources/manager.py` 注册即可；其余业务层不需要修改。
 
 欢迎提交Pull Request或Issue来帮助完善功能和修正问题！<br>
-
-**其他页面**
-
-[百度贴吧](https://tieba.baidu.com/p/9298301903)
 
 **开源许可与第三方库**
 

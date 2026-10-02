@@ -617,7 +617,7 @@ function makeMap() {
     // 添加自定义版权信息
     L.control.attribution({
         position: 'bottomright',
-        prefix: 'NOTAM航警落区绘制工具 by 叁点壹肆壹伍 Joey0609'
+        prefix: 'NOTAM 航警地图 by sliverwolf233'
     }).addTo(map);
 
     // 添加比例尺

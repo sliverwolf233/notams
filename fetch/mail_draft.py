@@ -575,7 +575,7 @@ def generate_change_email_draft(previous_data, current_data, include_match=True,
                 else:
                     lines.append(f"  航警坐标: {_format_geometry(item)}")
                 if include_match and section_mode != 'added_only' and item.get('index') is not None:
-                    lines.append(f"  历史匹配结果(链接): https://joey0609.github.io/notams/match.html?index={item['index']}")
+                    lines.append(f"  历史匹配结果(链接): https://sliverwolf233.github.io/notams/match.html?index={item['index']}")
                     for match_line in _format_match_summary(item['index']):
                         lines.append(f'  - {match_line}')
         else:
@@ -635,11 +635,11 @@ def generate_change_email_draft(previous_data, current_data, include_match=True,
     def match_link(index_value):
         if index_value is None:
             return ''
-        url = f'https://joey0609.github.io/notams/match.html?index={index_value}'
+        url = f'https://sliverwolf233.github.io/notams/match.html?index={index_value}'
         return f'<a href="{url}" target="_blank" style="color:#1a73e8; text-decoration:none;">历史匹配结果</a>'
 
     def home_link():
-        return '<a href="https://joey0609.github.io/notams/" target="_blank" style="color:#1a73e8; text-decoration:none;">【打开网站】</a>'
+        return '<a href="https://sliverwolf233.github.io/notams/" target="_blank" style="color:#1a73e8; text-decoration:none;">【打开网站】</a>'
 
     body_html = '<html><body style="font-family: \"Microsoft YaHei\", Arial, sans-serif; color: #222;">'
     body_html += '<div style="line-height:1.6; font-size:14px;">'

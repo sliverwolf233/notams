@@ -122,7 +122,7 @@ function bindGlassSheen(control) {
 /* 地图模式（矢量地图 / 卫星地图 / 3D 地球）三个选项也要同一套跟随指针的光斑 */
 document.querySelectorAll('#mapModeControl button').forEach(bindGlassSheen);
 
-const GITHUB_STAR_URL = 'https://github.com/Joey0609/notams';
+const GITHUB_STAR_URL = 'https://github.com/sliverwolf233/notams';
 const GITHUB_STAR_THANK_YOU = '❤ 谢谢 ❤';
 const GITHUB_STAR_RESET_DELAY = 30000;
 

@@ -2,24 +2,23 @@
 
 # 🌐 Notam Website Viewer 
 
-![GitHub stars](https://img.shields.io/github/stars/Joey0609/notams?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Joey0609/notams?style=social)
-![GitHub issues](https://img.shields.io/github/issues/Joey0609/notams)
-[![Website](https://img.shields.io/badge/website-online-brightgreen)](https://joey0609.github.io/notams/)
-[![Website Visits](https://img.shields.io/badge/dynamic/json?color=blue&label=Visits&query=value&url=https://joey0609.github.io/notams/visits.json)](https://counter.dev/dashboard.html?user=Starsky69&token=Beb6_vARt7c%3D)
+![GitHub stars](https://img.shields.io/github/stars/sliverwolf233/notams?style=social)
+![GitHub forks](https://img.shields.io/github/forks/sliverwolf233/notams?style=social)
+![GitHub issues](https://img.shields.io/github/issues/sliverwolf233/notams)
+[![Website](https://img.shields.io/badge/website-online-brightgreen)](https://sliverwolf233.github.io/notams/)
 </div>
 
 [中文](README_CN.md) | English
 
 This project parses NOTAMs and related maritime safety notices to extract rocket launch areas, debris zones, and restricted zones, then visualizes them on a map. It also includes historical archive matching, source reconciliation, image export, coordinate lookup, and distance measurement features.<br>
 
-## Website: https://joey0609.github.io/notams/ <br>
+## Website: https://sliverwolf233.github.io/notams/ <br>
 
 **If you find this project helpful, please consider giving it a ⭐ on GitHub. Your support helps us keep improving and adding new features.**
 
-**This project is modified from FallingFengre/notams:main.**<br>
+**This project is modified from [Joey0609/notams](https://github.com/Joey0609/notams) (originally FallingFengre/notams), redeployed by [sliverwolf233](https://github.com/sliverwolf233).**<br>
 
-## <span style="font-weight:bold;color:red;">This project must not be used for illegal purposes. Please help safeguard national security, and do not analyze or distribute non-rocket flight notams.</span>
+## <span style="font-weight:bold;">Disclaimer: This site only displays NOTAM information for reference and study. It is not a source of operational flight data — always consult official AIP / NOTAM publications for flight operations. Do not use this project for illegal purposes.</span>
 
 ## Project Overview
 
@@ -66,10 +65,6 @@ fetch/sources/
 ```
 
 If you find a bug or want to improve the project, feel free to open an Issue or Pull Request.
-
-**Other Pages**
-
-[Baidu Tieba](https://tieba.baidu.com/p/9298301903)
 
 **Open Source License and Third-Party Libraries**
 
